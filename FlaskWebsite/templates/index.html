@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+        <header class="masthead" style="background-image: url(' {{ url_for('static',filename='assets/img/p4.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Tech Munch</h1>
+                            <span class="subheading"><b>❝A Practical blog for Technical people❞</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    {% for post in posts %}
+                    <div class="post-preview">
+                        <a href="/post/{{post.slug}}">
+                            <h2 class="post-title">{{post.title}}</h2>
+                            <h3 class="post-subtitle">{{post.content[0:90]}}...</h3>
+                        </a>
+                        <p class="post-meta">
+                           <b> Posted on
+                            {{post.date}}</b>
+                        </p>
+                    </div>
+                    <hr class="my-4" />
+                    {% endfor %}
+                    <br>
+                    <!-- {% if number!=0 %}
+                    <a class="btn btn-primary float-left" herf="/">&larr; NEWER POSTS</a> 
+                    {% endif %}
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> -->
+                    <a class="btn btn-primary float-left text-uppercase" href="{{prev}}">&larr; Newer Posts</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        <a class="btn btn-primary float-right text-uppercase" href="{{next}}">Older Posts &rarr;</a>
+                </div>
+            </div>
+        </div>
+        {% endblock %}

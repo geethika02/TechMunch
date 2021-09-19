@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+        <header class="masthead" style="background-image: url(' {{ url_for('static',filename='assets/img/a2.jpg') }}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>About Us</h1>
+                            <span class="subheading"><b>This is What We Do</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>As a team, we always try to develop blogs and posts on the latest informations and news related not only to technology but all the other real world things and incidents that are happening in today's competetive and busy tech world.</p>
+                        <p>As the saying goes ,"Knowledge increases by sharing but not by saving". So start sharing rather than saving!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+{% endblock %}

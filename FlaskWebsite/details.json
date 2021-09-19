@@ -1,0 +1,11 @@
+{
+    "params":
+    {
+      "gmail-user":"enter your email id",
+      "gmail-password":"enter your email password",
+      "no_of_posts":3,
+      "admin_user":"geethika",
+      "admin_password":"1234",
+      "upload_location":"static/assets/img" 
+    }
+  }
