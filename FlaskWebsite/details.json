@@ -1,8 +1,8 @@
 {
     "params":
     {
-      "gmail-user":"enter your email id",
-      "gmail-password":"enter your email password",
+      "gmail-user":"enter_your_gmail",
+      "gmail-password":"enter_your_gmail_password",
       "no_of_posts":3,
       "admin_user":"geethika",
       "admin_password":"1234",
